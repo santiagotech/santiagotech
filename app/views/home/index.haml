@@ -1,4 +1,4 @@
-.jumbotron
+.jumbotron{style: "background-image: url(brand.svg) !important; background-color: #FFF;"}
   .container
     .row
       .col-md-12{class: 'text-center'}
@@ -6,76 +6,78 @@
         %p Do Básico ao Avançado, mantido por uma comunidade apaixonada.
         %button{class: 'btn btn-primary btn-lg top'} Ver grade toda
 
-#how-it-work
+#how-it-work{style: 'margin-bottom: 100px;'}
   .container
     .row
       .col-md-12
         .col-md-4{class: 'col-md-offset-4 text-center'}
           %h3{class: 'bold'} Como funciona?
           %p Esse é o site que nós desejavamos quando nós estavamos aprendendo por nosso esforço próprio
-        
-        .col-md-4
+          %br
+          %br
 
       .col-md-4{class: 'text-center'}
-        %h1 <i class='glyphicon glyphicon-search'></i>
-        %h3{class: 'bold'} Aprenda
-        %p Aprenda com nossa grade, composta pelos melhores recursos, desafios e projetos.
+        = image_tag('learn.svg', width: '100%', height: '170px', style: 'margin-bottom: 10px;')
+        %h3{class: 'bold'} APRENDA
+        %p Aprenda com nossa grade, composta pelos melhores recursos, artigos, problemas,   desafios e projetos.
 
       .col-md-4{class: 'text-center'}
-        %h1 <i class='glyphicon glyphicon-search'></i>
-        %h3{class: 'bold'} Crie
-        %p Aprenda com nossa grade, composta pelos melhores recursos, desafios e projetos.
+        = image_tag('build.svg', width: '100%', height: '170px', style: 'margin-bottom: 10px;')
+        %h3{class: 'bold'} CRIE
+        %p Construa aplicações para seu portifólio, de simples scripts a aplicativos complexos e coloque-os online
 
       .col-md-4{class: 'text-center'}
-        %h1 <i class='glyphicon glyphicon-search'></i>
-        %h3{class: 'bold'} Compartilhe
-        %p Aprenda com nossa grade, composta pelos melhores recursos, desafios e projetos.
+        = image_tag('community.svg', width: '100%', height: '170px', style: 'margin-bottom: 10px;')
+        %h3{class: 'bold'} COMPARTILHE
+        %p Você não está sozinho. Aprenda e busque ajuda na comunidade com desenvolvedores experientes.
 
 .jumbotron
   .container
     .row
       .col-md-12
-        %h2{class: 'bold'} Aprenda tudo o que necessita para ser um desenvolvedor Web.
-        %br
+        .col-md-12
+          %h2{class: 'bold'} Aprenda tudo o que necessita para ser um desenvolvedor Web.
+          %p Nós preparamos tudo que é necessario para você começar a jornada.
+          %br
 
       .col-md-12
         .col-md-4
           .panel.panel-default{class: 'text-center', style: 'padding: 20px;'}
-            %h1{class: 'bold'} <i class='glyphicon glyphicon-search'></i> 
+            = image_tag('html.svg', width: '100%', height: '170px', style: 'margin-bottom: 10px;')
             %h4{class: 'bold'} HTML + CSS
 
         .col-md-4
           .panel.panel-default{class: 'text-center', style: 'padding: 20px;'}
-            %h1{class: 'bold'} <i class='glyphicon glyphicon-search'></i> 
+            = image_tag('javascript.svg', width: '100%', height: '170px', style: 'margin-bottom: 10px;')
             %h4{class: 'bold'} JAVASCRIPT
     
         .col-md-4
           .panel.panel-default{class: 'text-center', style: 'padding: 20px;'}
-            %h1{class: 'bold'} <i class='glyphicon glyphicon-search'></i> 
+            = image_tag('git.svg', width: '100%', height: '170px', style: 'margin-bottom: 10px;')
             %h4{class: 'bold'} GIT
 
         .col-md-4
           .panel.panel-default{class: 'text-center', style: 'padding: 20px;'}
-            %h1{class: 'bold'} <i class='glyphicon glyphicon-search'></i> 
+            = image_tag('database.svg', width: '100%', height: '170px', style: 'margin-bottom: 10px;')
             %h4{class: 'bold'} BANCO DE DADOS
 
         .col-md-4
           .panel.panel-default{class: 'text-center', style: 'padding: 20px;'}
-            %h1{class: 'bold'} <i class='glyphicon glyphicon-search'></i> 
+            = image_tag('ruby.svg', width: '100%', height: '170px', style: 'margin-bottom: 10px;')
             %h4{class: 'bold'} RUBY
     
         .col-md-4
           .panel.panel-default{class: 'text-center', style: 'padding: 20px;'}
-            %h1{class: 'bold'} <i class='glyphicon glyphicon-search'></i> 
+            = image_tag('rubyonrails.svg', width: '100%', height: '170px', style: 'margin-bottom: 10px;')
             %h4{class: 'bold'} RUBY ON RAILS
   
         .col-md-4{class: 'col-md-offset-4'}
           .panel.panel-default{class: 'text-center', style: 'padding: 20px;'}
-            %h1{class: 'bold'} <i class='glyphicon glyphicon-search'></i> 
-            %h4{class: 'bold'} RUBY ON RAILS
+            = image_tag('gethired.svg', width: '100%', height: '170px', style: 'margin-bottom: 10px;')
+            %h4{class: 'bold'} SEJA CONTRATADO
 
-      .col-m-4{class: 'col-md-offset-4'}
-        %button{class: 'btn btn-primary btn-lg top'} Ver Grade
+      .col-md-4{class: 'col-md-offset-4'}
+        %button{class: 'btn btn-primary btn-lg top', style: 'width: 100%; background-color: #cc9543; border: 1px solid #cc9543;'} Ver Grade
 
 #histories
   .container
@@ -85,37 +87,38 @@
         %p{class: 'text-center'} Acompanhe as historias de sucesso de nosso projeto.
         %br
 
-      .col-md-6{class: 'padding: 5px;'}
-        .media
-          .media-left
-            =image_tag('', class: 'media-object', style: 'width: 34px; height: 34px; background-color: #EEE;')
-          .media-body
+      .col-md-6
+        .media{class: 'panel panel-default', style: 'padding: 20px;'}
+          .media-left{style: 'display: inline-block;'}
+            =image_tag('ron.jpg', class: 'media-object', 
+            style: 'width: 54px; height: 54px; background-color: #EEE; border-radius: 54px;')
+          .media-body{style: 'display: inline-block;'}
             %h4{class: 'media-heading'}=link_to 'Rob Pando'
             %p Esse curso mudou minha vida totalmente.
 
-      .col-md-6{style: 'padding: 5px;'}
-        .media
-          .media-left
-            =image_tag('', class: 'media-object', style: 'width: 34px; height: 34px; background-color: #EEE;')
-          .media-body
-            %h4{class: 'media-heading'}=link_to 'Olivia Ester'
+      .col-md-6
+        .media{class: 'panel panel-default', style: 'padding: 20px;'}
+          .media-left{style: 'display: inline-block;'}
+            =image_tag('olivia.jpg', class: 'media-object', 
+            style: 'width: 54px; height: 54px; background-color: #EEE; border-radius: 54px;')
+          .media-body{style: 'display: inline-block;'}
+            %h4{class: 'media-heading'}=link_to 'Rob Pando'
             %p Esse curso mudou minha vida totalmente.
-
-      .col-md-6{style: 'padding: 20px;'}
-        .media
-          .media-left
-            =image_tag('', class: 'media-object', style: 'width: 34px; height: 34px; background-color: #EEE;')
-          .media-body
-            %h4{class: 'media-heading'}=link_to 'Cody Lyod'
-            %p Esse curso mudou minha vida totalmente.
-
-      .col-md-6{style: 'padding: 5px;'}
-        .media
-          .media-left
-            =image_tag('', class: 'media-object', style: 'width: 34px; height: 34px; background-color: #EEE;')
-          .media-body
-            %h4{class: 'media-heading'}=link_to 'William Kennedy'
-            %p Esse curso mudou minha vida totalmente.
-
 
       .col-md-6
+        .media{class: 'panel panel-default', style: 'padding: 20px;'}
+          .media-left{style: 'display: inline-block;'}
+            =image_tag('cody.jpg', class: 'media-object', 
+            style: 'width: 54px; height: 54px; background-color: #EEE; border-radius: 54px;')
+          .media-body{style: 'display: inline-block;'}
+            %h4{class: 'media-heading'}=link_to 'Rob Pando'
+            %p Esse curso mudou minha vida totalmente.
+  
+      .col-md-6
+        .media{class: 'panel panel-default', style: 'padding: 20px;'}
+          .media-left{style: 'display: inline-block;'}
+            =image_tag('william.jpg', class: 'media-object', 
+            style: 'width: 54px; height: 54px; background-color: #EEE; border-radius: 54px;')
+          .media-body{style: 'display: inline-block;'}
+            %h4{class: 'media-heading'}=link_to 'Rob Pando'
+            %p Esse curso mudou minha vida totalmente.

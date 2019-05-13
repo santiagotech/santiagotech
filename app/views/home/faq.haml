@@ -1,0 +1,135 @@
+= provide :title, 'Perguntas Frequentes'
+
+.container
+  .row
+    .col-md-12
+      .col-md-8{class: 'col-md-offset-2'}
+        %h1{class:'bold text-center'} Perguntas Frequentes
+        %p{class: 'text-center'} Acompanhe as perguntas frequentes de nosso projeto <b>SantiagoTech</b>.
+        %br
+
+        .col-md-12
+          .panel-group{id: 'accordion', role: 'tablist', 'aria-multiselectable': 'true'}
+            .panel{class: 'panel-default'}
+              .panel-heading{role: 'tab', id: 'headingOne'}
+                %h4{class: 'panel-title'}
+                  =link_to 'Pra quem é o SantiagoTech?', '#collapseOne', 'data-toggle': 'collapse', 'data-parent': '#accordion', 'aria-expanded': true, 'aria-controls': 'collapseOne'
+                  %i{class: 'fas fa-plus pull-right'}
+              .panel-collapse{id: 'collapseOne', class: 'collapse', role: 'tabpanel', 'aria-labelledby': 'headingOne'}
+                .panel-body
+                  Algum texto
+
+        .col-md-12
+          .panel-group{id: 'accordion', role: 'tablist', 'aria-multiselectable': 'true'}
+            .panel{class: 'panel-default'}
+              .panel-heading{role: 'tab', id: 'headingOne'}
+                %h4{class: 'panel-title'}
+                  =link_to 'Qual é o objetivo do SantiagoTech?', '#collapseOne', 'data-toggle': 'collapse', 'data-parent': '#accordion', 'aria-expanded': true, 'aria-controls': 'collapseOne'
+                  %i{class: 'fas fa-plus pull-right'}
+              .panel-collapse{id: 'collapseOne', class: 'collapse', role: 'tabpanel', 'aria-labelledby': 'headingOne'}
+                .panel-body
+                  Algum texto
+
+        .col-md-12
+          .panel-group{id: 'accordion', role: 'tablist', 'aria-multiselectable': 'true'}
+            .panel{class: 'panel-default'}
+              .panel-heading{role: 'tab', id: 'headingOne'}
+                %h4{class: 'panel-title'}
+                  =link_to 'Qual é o duração do projeto?', '#collapseOne', 'data-toggle': 'collapse', 'data-parent': '#accordion', 'aria-expanded': true, 'aria-controls': 'collapseOne'
+                  %i{class: 'fas fa-plus pull-right'}
+              .panel-collapse{id: 'collapseOne', class: 'collapse', role: 'tabpanel', 'aria-labelledby': 'headingOne'}
+                .panel-body
+                  Algum texto
+
+          .col-md-12
+          .panel-group{id: 'accordion', role: 'tablist', 'aria-multiselectable': 'true'}
+            .panel{class: 'panel-default'}
+              .panel-heading{role: 'tab', id: 'headingOne'}
+                %h4{class: 'panel-title'}
+                  =link_to 'Que tecnologia o projeto irá ensinar?', '#collapseOne', 'data-toggle': 'collapse', 'data-parent': '#accordion', 'aria-expanded': true, 'aria-controls': 'collapseOne'
+                  %i{class: 'fas fa-plus pull-right'}
+              .panel-collapse{id: 'collapseOne', class: 'collapse', role: 'tabpanel', 'aria-labelledby': 'headingOne'}
+                .panel-body
+                  Algum texto
+
+        .col-md-12
+          .panel-group{id: 'accordion', role: 'tablist', 'aria-multiselectable': 'true'}
+            .panel{class: 'panel-default'}
+              .panel-heading{role: 'tab', id: 'headingOne'}
+                %h4{class: 'panel-title'}
+                  =link_to 'O que nos torna diferente de outros projetos?', '#collapseOne', 'data-toggle': 'collapse', 'data-parent': '#accordion', 'aria-expanded': true, 'aria-controls': 'collapseOne'
+                  %i{class: 'fas fa-plus pull-right'}
+              .panel-collapse{id: 'collapseOne', class: 'collapse', role: 'tabpanel', 'aria-labelledby': 'headingOne'}
+                .panel-body
+                  Algum texto
+
+        .col-md-12
+          .panel-group{id: 'accordion', role: 'tablist', 'aria-multiselectable': 'true'}
+            .panel{class: 'panel-default'}
+              .panel-heading{role: 'tab', id: 'headingOne'}
+                %h4{class: 'panel-title'}
+                  =link_to 'Por que Ruby on Rails?', '#collapseOne', 'data-toggle': 'collapse', 'data-parent': '#accordion', 'aria-expanded': true, 'aria-controls': 'collapseOne'
+                  %i{class: 'fas fa-plus pull-right'}
+              .panel-collapse{id: 'collapseOne', class: 'collapse', role: 'tabpanel', 'aria-labelledby': 'headingOne'}
+                .panel-body
+                  Algum texto
+
+        .col-md-12
+          .panel-group{id: 'accordion', role: 'tablist', 'aria-multiselectable': 'true'}
+            .panel{class: 'panel-default'}
+              .panel-heading{role: 'tab', id: 'headingOne'}
+                %h4{class: 'panel-title'}
+                  =link_to 'Como faço para participar?', '#collapseOne', 'data-toggle': 'collapse', 'data-parent': '#accordion', 'aria-expanded': true, 'aria-controls': 'collapseOne'
+                  %i{class: 'fas fa-plus pull-right'}
+              .panel-collapse{id: 'collapseOne', class: 'collapse', role: 'tabpanel', 'aria-labelledby': 'headingOne'}
+                .panel-body
+                  Algum texto
+
+        .col-md-12
+          .panel-group{id: 'accordion', role: 'tablist', 'aria-multiselectable': 'true'}
+            .panel{class: 'panel-default'}
+              .panel-heading{role: 'tab', id: 'headingOne'}
+                %h4{class: 'panel-title'}
+                  =link_to 'O Projeto é gratuito?', '#collapseOne', 'data-toggle': 'collapse', 'data-parent': '#accordion', 'aria-expanded': true, 'aria-controls': 'collapseOne'
+                  %i{class: 'fas fa-plus pull-right'}
+              .panel-collapse{id: 'collapseOne', class: 'collapse', role: 'tabpanel', 'aria-labelledby': 'headingOne'}
+                .panel-body
+                  Algum texto
+
+        .col-md-12
+          .panel-group{id: 'accordion', role: 'tablist', 'aria-multiselectable': 'true'}
+            .panel{class: 'panel-default'}
+              .panel-heading{role: 'tab', id: 'headingOne'}
+                %h4{class: 'panel-title'}
+                  =link_to 'Receberei meu certificado de termino de curso?', '#collapseOne', 'data-toggle': 'collapse', 'data-parent': '#accordion', 'aria-expanded': true, 'aria-controls': 'collapseOne'
+                  %i{class: 'fas fa-plus pull-right'}
+              .panel-collapse{id: 'collapseOne', class: 'collapse', role: 'tabpanel', 'aria-labelledby': 'headingOne'}
+                .panel-body
+                  Algum texto
+
+        .col-md-12
+          .panel-group{id: 'accordion', role: 'tablist', 'aria-multiselectable': 'true'}
+            .panel{class: 'panel-default'}
+              .panel-heading{role: 'tab', id: 'headingOne'}
+                %h4{class: 'panel-title'}
+                  =link_to 'A comunidade tem algum código de conduta?', '#collapseOne', 'data-toggle': 'collapse', 'data-parent': '#accordion', 'aria-expanded': true, 'aria-controls': 'collapseOne'
+                  %i{class: 'fas fa-plus pull-right'}
+              .panel-collapse{id: 'collapseOne', class: 'collapse', role: 'tabpanel', 'aria-labelledby': 'headingOne'}
+                .panel-body
+                  Algum texto
+
+        .col-md-12
+          .panel-group{id: 'accordion', role: 'tablist', 'aria-multiselectable': 'true'}
+            .panel{class: 'panel-default'}
+              .panel-heading{role: 'tab', id: 'headingOne'}
+                %h4{class: 'panel-title'}
+                  =link_to 'Como posso me manter informado?', '#collapseOne', 'data-toggle': 'collapse', 'data-parent': '#accordion', 'aria-expanded': true, 'aria-controls': 'collapseOne'
+                  %i{class: 'fas fa-plus pull-right'}
+              .panel-collapse{id: 'collapseOne', class: 'collapse', role: 'tabpanel', 'aria-labelledby': 'headingOne'}
+                .panel-body
+                  Algum texto
+
+        .col-md-12{class: 'text-center'}
+          %h2{class: 'bold'} Ainda com duvidas?
+          %p Encontre a resposta para sua duvida em nossa comunidade no <a href='https://discord.gg/2GMFNYT'>Discord</a>
+          =link_to 'Ir para comunidade', 'https://discord.gg/2GMFNYT', class: 'btn btn-primary btn-lg top', target: '_blank'
