@@ -14,3 +14,41 @@
  *= require_self
  */
  @import 'bootstrap';
+
+
+ body {
+   position: relative;
+   font-family: 'Montserrat', sans-serif, arial, serif;
+   font-size: 16px; 
+ }
+ 
+ .bold {
+  position: relative;
+  font-weight: bold;
+ }
+
+ footer {
+   background-color: #FFF !important; 
+   margin-bottom: 0px !important;
+   padding-bottom: 30px;
+
+   h2 {
+    position: relative;
+    text-transform: uppercase;
+    font-weight: bold;
+   }
+
+   i {
+    margin-top: 40px;
+    position: relative;
+    font-size: 23px;
+    margin-left: 5px;
+    margin-right: 5px; 
+   }
+
+   a {
+    color: #999; 
+    position: relative;
+    font-weight: bold;
+   }
+ }
