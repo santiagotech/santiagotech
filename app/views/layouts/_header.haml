@@ -1,0 +1,21 @@
+%header
+  %nav{class: 'nav navbar-default'}
+    .container-fluid{class: 'container'}
+      .navbar-header
+        %button{type: 'button', class: 'navbar-toggle collapsed', 'data-toggle':'collapse', 'data-target': '#bs-example-navbar-collapse-1','aria-expanded': 'false'}
+          %span{class: 'sr-only'}Toggle Navigation
+          %span{class: 'icon-bar'}
+          %span{class: 'icon-bar'}
+          %span{class: 'icon-bar'}
+        =link_to 'SantiagoTech', '', class: 'navbar-brand'        
+
+
+      .collapse{class: 'navbar-collapse', id: 'bs-example-navbar-collapse-1'}
+        %ul{class: 'nav navbar-nav'}
+
+
+        %ul{class: 'nav navbar-nav navbar-right'}
+          %li=link_to 'Home', root_path
+          %li=link_to 'Sobre', about_path
+          %li=link_to 'FAQ', faq_path
+          %li=link_to 'Contribua', ''
