@@ -25,6 +25,13 @@
 .navbar-default {
   position: relative;
   background-color: #FFF;
+  
+  .navbar-brand {
+   position: relative;
+   text-weight: bold;
+   tex-transform: uppercase !important;
+  }
+
   a {
    position: relative;
    font-weight: bold;

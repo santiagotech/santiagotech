@@ -29,6 +29,9 @@ gem 'devise'
 gem 'haml'
 gem 'bootstrap3-rails'
 gem 'jquery-rails'
+gem 'rails_admin'
+gem 'kaminari'
+gem 'kaminari-bootstrap'
 # Use ActiveStorage variant
 # gem 'mini_magick', '~> 4.8'
 
