@@ -5,7 +5,10 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+require 'benchmark'
+puts '\n Start running seeds \n'
 
+realtime = Benchmark.realtime do
 # State
 # @implemented
 State.destroy_all
@@ -56,7 +59,7 @@ Neighborhood.create(
       city: city
     },
     {
-      ǹame: 'Alto da Boa Vista', 
+      name: 'Alto da Boa Vista', 
       city: city
     },
     {
@@ -320,27 +323,27 @@ College.create(
   [
     {
       name: 'Iee Professor Isaias', 
-      type: 'Estadual',
+      type_of: 'Estadual',
       city: city
     },
     {
       name: 'Colégio Estadual Apolinario Porto Alegre',
-      type: 'Estadual',
+      type_of: 'Estadual',
       city: city
     },
     {
       name: 'Thomas Fortes',
-      type: 'Estadual',
+      type_of: 'Estadual',
       city: city
     },
     {
       name: 'Colégio Estadual Cristovão Pereira',
-      type: 'Estadual',
+      type_of: 'Estadual',
       city: city
     },
     {
       name: 'Colégio Estadual Monsenhor Assis',
-      type: 'Estadual',
+      type_of: 'Estadual',
       city: city
     }
   ]
@@ -378,3 +381,7 @@ University.create(
     }
   ]
 )
+end
+
+puts '\n Finished running seeds \n'
+puts "\nProcessing time #{realtime}"
