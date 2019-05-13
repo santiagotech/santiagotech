@@ -9,20 +9,24 @@
 # State
 # @implemented
 State.destroy_all
-State.create([{
-  name: 'Rio Grande do Sul',
-  region: 'Sul',
-  acronym: 'RS'
-}])
+State.create([
+  {
+    name: 'Rio Grande do Sul',
+    region: 'Sul',
+    acronym: 'RS'
+  }
+])
 
 # City
 # @implemented
 state = State.where(name: 'Rio Grande do Sul').first()
 City.destroy_all
-City.create([{
-  name: 'Santiago', 
-  state: state
-}])
+City.create([
+  {
+    name: 'Santiago', 
+    state: state
+  }
+])
 
 # Neighborhood
 # @implemented
@@ -30,17 +34,44 @@ city = City.where(name: 'Santiago').first()
 Neighborhood.destroy_all
 Neighborhood.create(
   [
-    {name: '1 Distrito', city: city},
-    {name: '5 Distrito', city: city},
+    {
+      name: '1 Distrito',
+      city: city
+    },
+    {
+      name: '5 Distrito', 
+      city: city
+    },
     # A
-    {name: 'Aeroporto Municipal', city: city},
-    {name: 'Alto Boa Vista', city: city},
-    {ǹame: 'Alto da Boa Vista', city: city},
-    {name: 'Ana Bonato', city: city},
-    {name: 'Atalia', city: city},
-    {name: 'Ator da Boa Vista', city: city},
+    {
+      name: 'Aeroporto Municipal', 
+      city: city
+    },
+    {
+      name: 'Alto Boa Vista', 
+      city: city
+    },
+    {
+      ǹame: 'Alto da Boa Vista', 
+      city: city
+    },
+    {
+      name: 'Ana Bonato', 
+      city: city
+    },
+    {
+      name: 'Atalia', 
+      city: city
+    },
+    {
+      name: 'Ator da Boa Vista', 
+      city: city
+    },
     # B
-    {name: 'B Belizario', city: city},
+    {
+      name: 'B Belizario',
+      city: city
+    },
     {name: 'Bairro Gaspar Dutra', city: city},
     {name: 'Bairro Vila Leste', city: city},
     {name: 'Bairro Zampereti', city: city},
@@ -106,8 +137,76 @@ Neighborhood.create(
     {name: 'Vila Paineiras', city: city},
     {name: 'Vila Rica', city: city},
     {name: 'Vila S Pompeu', city: city},
-    {name: 'Vista Alegre', city: city},
+    {
+      name: 'Vista Alegre', 
+      city: city
+    },
     # Z
-    {name: 'Zona Rural', city: city}
+    {
+      name: 'Zona Rural', 
+      city: city
+    }
   ]
 )
+
+# College
+# @implemented
+College.destroy_all
+College.create([
+  {
+    name: 'Iee Professor Isaias', 
+    type: 'Estadual',
+    city: city
+  },
+  {
+    name: 'Colégio Estadual Apolinario Porto Alegre',
+    type: 'Estadual',
+    city: city
+  },
+  {
+    name: 'Thomas Fortes',
+    type: 'Estadual',
+    city: city
+  },
+  {
+    name: 'Colégio Estadual Cristovão Pereira',
+    type: 'Estadual',
+    city: city
+  },
+  {
+    name: 'Colégio Estadual Monsenhor Assis',
+    type: 'Estadual',
+    city: city
+  }
+])
+
+# University
+# @implemented
+University.destroy_all
+University.create([
+  {
+    name: 'UNINTER',
+    description: 'Centro universitário internacional',
+    city: city
+  },
+  {
+    name: 'UNISUL',
+    description: 'Universidade do Sul de Santa Catarina',
+    city: city
+  },
+  {
+    name: 'ULBRA',
+    description: 'Universidade Luterana do Brasil',
+    city: city
+  },
+  {
+    name: 'UNOPAR',
+    description: 'Universidade Norte do Paraná',
+    city: city
+  },
+  {
+    name: 'URI',
+    description: 'Universidade Regional Integrada do Alto Uruguai e das Missões',
+    city: city
+  }
+])
