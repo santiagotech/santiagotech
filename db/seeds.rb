@@ -133,7 +133,7 @@ Neighborhood.create(
     {
       name: 'Distrito Industrial', 
       city: city
-    }
+    },
     # G
     {
       name: 'Gaspar Dutra', 
@@ -160,6 +160,7 @@ Neighborhood.create(
     {
       name: 'Jardim América', 
       city: city
+    
     },
     {
       name: 'Jardim Botânico', 

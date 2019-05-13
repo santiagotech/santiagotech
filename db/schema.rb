@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_05_13_191242) do
+ActiveRecord::Schema.define(version: 2019_05_13_191410) do
 
   create_table "cities", force: :cascade do |t|
     t.string "name"
@@ -18,6 +18,15 @@ ActiveRecord::Schema.define(version: 2019_05_13_191242) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["state_id"], name: "index_cities_on_state_id"
+  end
+
+  create_table "colleges", force: :cascade do |t|
+    t.string "name"
+    t.string "type"
+    t.integer "city_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["city_id"], name: "index_colleges_on_city_id"
   end
 
   create_table "neighborhoods", force: :cascade do |t|
@@ -34,6 +43,15 @@ ActiveRecord::Schema.define(version: 2019_05_13_191242) do
     t.string "acronym"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "universities", force: :cascade do |t|
+    t.string "name"
+    t.text "description"
+    t.integer "city_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["city_id"], name: "index_universities_on_city_id"
   end
 
 end
