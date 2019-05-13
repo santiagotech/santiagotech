@@ -5,3 +5,109 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+# State
+# @implemented
+State.destroy_all
+State.create([{
+  name: 'Rio Grande do Sul',
+  region: 'Sul',
+  acronym: 'RS'
+}])
+
+# City
+# @implemented
+state = State.where(name: 'Rio Grande do Sul').first()
+City.destroy_all
+City.create([{
+  name: 'Santiago', 
+  state: state
+}])
+
+# Neighborhood
+# @implemented
+city = City.where(name: 'Santiago').first()
+Neighborhood.destroy_all
+Neighborhood.create(
+  [
+    {name: '1 Distrito', city: city},
+    {name: '5 Distrito', city: city},
+    # A
+    {name: 'Aeroporto Municipal', city: city},
+    {name: 'Alto Boa Vista', city: city},
+    {ǹame: 'Alto da Boa Vista', city: city},
+    {name: 'Ana Bonato', city: city},
+    {name: 'Atalia', city: city},
+    {name: 'Ator da Boa Vista', city: city},
+    # B
+    {name: 'B Belizario', city: city},
+    {name: 'Bairro Gaspar Dutra', city: city},
+    {name: 'Bairro Vila Leste', city: city},
+    {name: 'Bairro Zampereti', city: city},
+    {name: 'Belizario', city: city},
+    {name: 'Belizario de Souza', city: city},
+    # C
+    {name: 'Carlos Humberto', city: city},
+    {name: 'Castilhos', city: city},
+    {name: 'Centro', city: city},
+    {name: 'Ceu Aberto', city: city},
+    {name: 'Condomínio jardim ipe', city: city},
+    {name: 'Corrd Tropas', city: city}
+    # D
+    {name: 'Daer', city: city},
+    {name: 'Distrito de Santiag', city: city},
+    {name: 'Distrito Industrial', city: city}
+    # G
+    {name: 'Gaspar Dutra', city: city},
+    {name: 'Guabiróba', city: city},
+    # I
+    {name: 'Interior', city: city},
+    {name: 'Irmã Dulce', city: city},
+    {name: 'Itu', city: city},
+    # J
+    {name: 'Jardim América', city: city},
+    {name: 'Jardim Botânico', city: city},
+    {name: 'Jardim Ipê', city: city},
+    {name: 'Jardim Eucaliptos', city: city},
+    {name: 'Jardim Eucalipt', city: city},
+    {name: 'João Evangelista', city: city},
+    # L
+    {name: 'Loteamento Darci Schiffler', city: city},
+    {name: 'Lulu Genro', city: city},
+    {name: 'Lulu Santos', city: city},
+    # M
+    {name: 'Maria Alice Gomes', city: city},
+    {name: 'Missões', city: city},
+    {name: 'Monsenhor Assis', city: city},
+    {name: 'Monte Alegre', city: city},
+    # N
+    {name: 'Nei Pereira', city: city},
+    # P
+    {name: 'Padre Assis', city: city},
+    {name: 'Presidente João Goulart', city: city},
+    # R
+    {name: 'Riachuelo', city: city},
+    {name: 'Rincão Castilhos', city: city},
+    # S
+    {name: 'Santiago Pompeu', city: city},
+    {name: 'São Jorge', city: city},
+    {name: 'São Vicente', city: city},
+    {name: 'Sede', city: city},
+    {name: 'Suburbios', city: city},
+    # V
+    {name: 'Vila Belizario', city: city},
+    {name: 'Vila Carlos Humbero', city: city},
+    {name: 'Vila das Paineiras', city: city},
+    {name: 'Vila Itu', city: city},
+    {name: 'Vila Jardim', city: city},
+    {name: 'Vila Missões', city: city},
+    {name: 'Vila N', city: city},
+    {name: 'Vila Nova', city: city},
+    {name: 'Vila Paineiras', city: city},
+    {name: 'Vila Rica', city: city},
+    {name: 'Vila S Pompeu', city: city},
+    {name: 'Vista Alegre', city: city},
+    # Z
+    {name: 'Zona Rural', city: city}
+  ]
+)
