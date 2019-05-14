@@ -9,6 +9,22 @@ require 'benchmark'
 puts '\n Start running seeds \n'
 
 realtime = Benchmark.realtime do
+
+# User
+# @implemented
+User.destroy_all
+User.create(
+  [
+    {
+      name: 'Renato Franco',
+      email: 'renato_ny@live.com',
+      password: 'test123',
+      password_confirmation: 'test123'
+    }
+  ]
+)
+
+
 # State
 # @implemented
 State.destroy_all
@@ -41,278 +57,134 @@ city = City.where(name: 'Santiago').first()
 Neighborhood.destroy_all
 Neighborhood.create(
   [
-    {
-      name: '1 Distrito',
-      city: city
-    },
-    {
-      name: '5 Distrito', 
-      city: city
-    },
-    # A
-    {
-      name: 'Aeroporto Municipal', 
-      city: city
-    },
-    {
-      name: 'Alto Boa Vista', 
-      city: city
-    },
-    {
-      name: 'Alto da Boa Vista', 
-      city: city
-    },
-    {
-      name: 'Ana Bonato', 
-      city: city
-    },
-    {
-      name: 'Atalia', 
-      city: city
-    },
-    {
-      name: 'Ator da Boa Vista', 
-      city: city
-    },
-    # B
-    {
-      name: 'B Belizario',
-      city: city
-    },
-    {
-      name: 'Bairro Gaspar Dutra', 
-      city: city
-    },
-    {
-      name: 'Bairro Vila Leste', 
-      city: city
-    },
-    {
-      name: 'Bairro Zampereti',
-      city: city
-    },
-    {
-      name: 'Belizario', 
-      city: city
-    },
-    {
-      name: 'Belizario de Souza', 
-      city: city
-    },
-    # C
-    {
-      name: 'Carlos Humberto', 
-      city: city
-    },
-    {
-      name: 'Castilhos', 
-      city: city
-    },
-    {
-      name: 'Centro', 
-      city: city
-    },
-    {
-      name: 'Ceu Aberto', 
-      city: city
-    },
-    {
-      name: 'Condomínio jardim ipe', 
-      city: city
-    },
-    {
-      name: 'Corrd Tropas', 
-      city: city
-    },
-    # D
-    {
-      name: 'Daer', 
-      city: city
-    },
-    {
-      name: 'Distrito de Santiag', 
-      city: city
-    },
-    {
-      name: 'Distrito Industrial', 
-      city: city
-    },
-    # G
-    {
-      name: 'Gaspar Dutra', 
-      city: city
-    },
-    {
-      name: 'Guabiróba', 
-      city: city
-    },
-    # I
-    {
-      name: 'Interior', 
-      city: city
-    },
-    {
-      name: 'Irmã Dulce', 
-      city: city
-    },
-    {
-      name: 'Itu', 
-      city: city
-    },
-    # J
-    {
-      name: 'Jardim América', 
-      city: city
-    
-    },
-    {
-      name: 'Jardim Botânico', 
-      city: city
-    },
-    {
-      name: 'Jardim Ipê', 
-      city: city
-    },
-    {
-      name: 'Jardim Eucaliptos', 
-      city: city
-    },
-    {
-      name: 'Jardim Eucalipt', 
-      city: city
-    },
-    {
-      name: 'João Evangelista', 
-      city: city
-    },
-    # L
-    {
-      name: 'Loteamento Darci Schiffler', 
-      city: city
-    },
-    {
-      name: 'Lulu Genro', 
-      city: city
-    },
-    {
-      name: 'Lulu Santos', 
-      city: city
-    },
-    # M
-    {
-      name: 'Maria Alice Gomes', 
-      city: city
-    },
-    {
-      name: 'Missões', 
-      city: city
-    },
-    {
-      name: 'Monsenhor Assis', 
-      city: city
-    },
-    {
-      name: 'Monte Alegre', 
-      city: city
-    },
-    # N
-    {
-      name: 'Nei Pereira', 
-      city: city
-    },
-    # P
-    {
-      name: 'Padre Assis', 
-      city: city
-    },
-    {
-      name: 'Presidente João Goulart', 
-      city: city
-    },
-    # R
-    {
-      name: 'Riachuelo', 
-      city: city
-    },
-    {
-      name: 'Rincão Castilhos', 
-      city: city
-    },
-    # S
-    {
-      name: 'Santiago Pompeu', 
-      city: city
-    },
-    {
-      name: 'São Jorge', 
-      city: city
-    },
-    {
-      name: 'São Vicente', 
-      city: city
-    },
-    {
-      name: 'Sede', 
-      city: city
-    },
-    {
-      name: 'Suburbios', 
-      city: city
-    },
-    # V
-    {
-      name: 'Vila Belizario', 
-      city: city
-    },
-    {
-      name: 'Vila Carlos Humbero', 
-      city: city
-    },
-    {
-      name: 'Vila das Paineiras', 
-      city: city
-    },
-    {
-      name: 'Vila Itu', 
-      city: city
-    },
-    {
-      name: 'Vila Jardim', 
-      city: city
-    },
-    {
-      name: 'Vila Missões', 
-      city: city
-    },
-    {
-      name: 'Vila N', 
-      city: city
-    },
-    {
-      name: 'Vila Nova', 
-      city: city
-    },
-    {
-      name: 'Vila Paineiras', 
-      city: city
-    },
-    {
-      name: 'Vila Rica', 
-      city: city
-    },
-    {
-      name: 'Vila S Pompeu', 
-      city: city
-    },
-    {
-      name: 'Vista Alegre', 
-      city: city
-    },
-    # Z
-    {
-      name: 'Zona Rural', 
-      city: city
-    }
+   {
+     name: 'Missões',
+     city: city
+   },
+   {
+     name: 'Belizário',
+     city: city
+   },
+   {
+     name: 'São Vicente',
+     city: city
+   },
+   {
+     name: 'Itu',
+     city: city
+   },
+   {
+     name: 'Vista Alegre',
+     city: city
+   },
+   {
+     name: 'Guabiroba',
+     city: city
+   },
+   {
+     name: 'Alto da Boa Vista',
+     city: city
+   },
+   {
+     name: 'Jardim das Paineiras',
+     city: city
+   },
+   {
+     name: 'Jardim das Palmeiras',
+     city: city
+   },
+   {
+     name: 'Centro',
+     city: city
+   },
+   {
+     name: 'Vila Nova',
+     city: city
+   },
+   {
+     name: 'Vila Rica',
+     city: city
+   },
+   {
+     name: 'Atalaia',
+     city: city
+   },
+   {
+     name: 'Maria Alice Gomes',
+     city: city
+   },
+   {
+     name: 'Zamperetti',
+     city: city
+   },
+   {
+     name: 'Santiago Pompeo',
+     city: city
+   },
+   {
+     name: 'Irmã Dulce',
+     city: city
+   },
+   {
+     name: 'Nei Pereira',
+     city: city
+   },
+   {
+     name: 'Jardim dos Eucaliptos',
+     city: city
+   },
+   {
+     name: 'Carlos Humberto',
+     city: city
+   },
+   {
+     name: 'Eletrecitários',
+     city: city
+   },
+   {
+     name: 'Riachuelo',
+     city: city
+   },
+   {
+     name: 'Lulu Genro',
+     city: city
+   },
+   {
+     name: 'João Goulart',
+     city: city
+   },
+   {
+     name: 'Gaspar Dutra',
+     city: city
+   },
+   {
+     name: 'São Jorge',
+     city: city
+   },
+   {
+     name: 'Monsenhor Assis',
+     city: city
+   },
+   {
+     name: 'Ana Bonato',
+     city: city
+   },
+   {
+     name: 'Céu aberto',
+     city: city
+   },
+   {
+     name: 'Castilhos',
+     city: city
+   },
+   {
+     name: 'João Evangelista',
+     city: city
+   },
+   {
+     name: 'DAER',
+     city: city
+   }
   ]
 )
 
@@ -322,7 +194,7 @@ College.destroy_all
 College.create(
   [
     {
-      name: 'Iee Professor Isaias', 
+      name: 'IEE Professor Isaias', 
       type_of: 'Estadual',
       city: city
     },
@@ -357,26 +229,31 @@ University.create(
     {
       name: 'UNINTER',
       description: 'Centro universitário internacional',
+      education_type: 'EAD',
       city: city
     },
     {
       name: 'UNISUL',
       description: 'Universidade do Sul de Santa Catarina',
+      education_type: 'EAD',
       city: city
     },
     {
       name: 'ULBRA',
       description: 'Universidade Luterana do Brasil',
+      education_type: 'EAD',
       city: city
     },
     {
       name: 'UNOPAR',
       description: 'Universidade Norte do Paraná',
+      education_type: 'EAD',
       city: city
     },
     {
       name: 'URI',
       description: 'Universidade Regional Integrada do Alto Uruguai e das Missões',
+      education_type: 'Presencial',
       city: city
     }
   ]
@@ -384,4 +261,4 @@ University.create(
 end
 
 puts '\n Finished running seeds \n'
-puts "\nProcessing time #{realtime}"
+puts "\nProcessing time #{realtime.ceil}"
