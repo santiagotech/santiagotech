@@ -8,7 +8,8 @@
         %p Do Básico ao Avançado, mantido por uma comunidade<strong> apaixonada</strong>.
         =link_to 'Ver toda a grade', courses_path, class: 'btn btn-primary btn-lg top'
       .col-md-5
-        = render 'subscriptions/form', subscription: @subscription
+        .col-md-12{class: 'panel panel-default', style: 'padding: 20px; padding-top: 30px; margin-top: -30px;'}
+          = render 'subscriptions/form', subscription: @subscription
 
 #how-it-work{style: 'margin-bottom: 100px;'}
   .container
