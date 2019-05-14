@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   # Authentication
   # @implemented
   devise_for :users
-  
+
   # Administration
   # @implemented
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin' 
@@ -16,7 +16,7 @@ Rails.application.routes.draw do
   get '/about',        to: 'home#about'
   get '/contributing', to: 'home#contributing'
   get '/courses',      to: 'home#courses'
-  get '/terms-of-use', to: 'home#terms-of-use'
+  get '/terms_of_use', to: 'home#terms_of_use'
   resources :subscriptions, only: [:create]
 
   # Blog
