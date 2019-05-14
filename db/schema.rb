@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_05_14_204416) do
+ActiveRecord::Schema.define(version: 2019_05_14_220332) do
 
   create_table "cities", force: :cascade do |t|
     t.string "name"
@@ -49,6 +49,30 @@ ActiveRecord::Schema.define(version: 2019_05_14_204416) do
     t.string "acronym"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "subscriptions", force: :cascade do |t|
+    t.string "name"
+    t.date "birthdate"
+    t.string "gender"
+    t.string "rg"
+    t.string "email"
+    t.string "phone"
+    t.integer "state_id"
+    t.integer "city_id"
+    t.integer "neighborhood_id"
+    t.integer "college_id"
+    t.integer "university_id"
+    t.integer "profession_id"
+    t.boolean "term"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["city_id"], name: "index_subscriptions_on_city_id"
+    t.index ["college_id"], name: "index_subscriptions_on_college_id"
+    t.index ["neighborhood_id"], name: "index_subscriptions_on_neighborhood_id"
+    t.index ["profession_id"], name: "index_subscriptions_on_profession_id"
+    t.index ["state_id"], name: "index_subscriptions_on_state_id"
+    t.index ["university_id"], name: "index_subscriptions_on_university_id"
   end
 
   create_table "universities", force: :cascade do |t|

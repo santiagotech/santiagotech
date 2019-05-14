@@ -1,4 +1,4 @@
-<%= form_for :subscriptions do |f| %>
+<%= form_for subscriptions do |f| %>
    <div class='field col-md-6'>
     <%= f.label :name, 'Nome Completo' %>
     <%= f.text_field :name, class: 'form-control', required: 'required',
@@ -31,24 +31,24 @@
     <%= f.collection_select(:state, State.all, :id, :name, {prompt: 'Selecionar Estado'}, {class: 'form-control', required: 'required'}) %>
    </div>
    <div class='field col-md-6'>
-    <%= f.label :state, 'Cidade' %>
+    <%= f.label :city, 'Cidade' %>
     <%= f.collection_select(:city, City.all, :id, :name, {prompt: 'Selecionar Cidade'}, {class: 'form-control', required: 'required'}) %>
    </div>
    <div class='field col-md-6'>
-    <%= f.label :state, 'Bairro' %>
-    <%= f.collection_select(:state, Neighborhood.order(name: :asc), :id, :name, {prompt: 'Selecionar Bairro'}, {class: 'form-control', required: 'required'}) %>
+    <%= f.label :neighborhood, 'Bairro' %>
+    <%= f.collection_select(:neighborhood, Neighborhood.order(name: :asc), :id, :name, {prompt: 'Selecionar Bairro'}, {class: 'form-control', required: 'required'}) %>
    </div>
    <div class='field col-md-6'>
-    <%= f.label :state, 'Colégio' %>
-    <%= f.collection_select(:state, College.all, :id, :name, {prompt: 'Selecionar Colégio'}, {class: 'form-control', required: 'required'}) %>
+    <%= f.label :college, 'Colégio' %>
+    <%= f.collection_select(:college, College.all, :id, :name, {prompt: 'Selecionar Colégio'}, {class: 'form-control', required: 'required'}) %>
    </div>
    <div class='field col-md-6'>
     <%= f.label :university, 'Universidade' %>
-    <%= f.collection_select(:state, University.all, :id, :name, {prompt: 'Selecionar Universidade'}, {class: 'form-control', required: 'required'}) %>
+    <%= f.collection_select(:university, University.all, :id, :name, {prompt: 'Selecionar Universidade'}, {class: 'form-control', required: 'required'}) %>
    </div>
    <div class='field col-md-6'>
-    <%= f.label :job, 'Profissão' %>
-    <%= f.collection_select(:state, Profession.all, :id, :name, {prompt: 'Selecionar Profissão'}, {class: 'form-control', required: 'required'}) %>
+    <%= f.label :profession, 'Profissão' %>
+    <%= f.collection_select(:profession, Profession.all, :id, :name, {prompt: 'Selecionar Profissão'}, {class: 'form-control', required: 'required'}) %>
    </div>
    <div class='field col-md-12'><br>
     <%= f.check_box :term %> Li e aceito os termos de <%= link_to 'inscrição', '' %>.

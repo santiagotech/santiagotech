@@ -1,8 +1,10 @@
 # frozen_string_literal: true
 Rails.application.routes.draw do
 
+  # Authentication
+  # @implemented
   devise_for :users
-  devise_for :views
+
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
   # Authentication
   # @implemented
@@ -16,7 +18,7 @@ Rails.application.routes.draw do
   get '/contributing', to: 'home#contributing'
   get '/courses',      to: 'home#courses'
   get '/terms-of-use', to: 'home#terms-of-use'
-
+  resources :subscriptions, only: [:create]
 
   # Blog
   # @implemented

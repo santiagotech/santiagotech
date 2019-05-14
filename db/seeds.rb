@@ -286,7 +286,7 @@ Profession.create(
     {name: 'Logistica'},
     {name: 'Marketing'},
     {name: 'Negócios Imobiliários'},
-    {name: 'Pilotegem profissional de aeronaves'},
+    {name: 'Pilotagem profissional de aeronaves'},
     {name: 'Segurança Publica'},
     {name: 'Turismo'},
     {name: 'Arte e Design'},
