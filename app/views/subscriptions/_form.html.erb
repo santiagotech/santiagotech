@@ -1,0 +1,59 @@
+<%= form_for :subscriptions do |f| %>
+   <div class='field col-md-6'>
+    <%= f.label :name, 'Nome Completo' %>
+    <%= f.text_field :name, class: 'form-control', required: 'required',
+    placeholder: 'Digite o nome', autocomplete: 'off' %>
+   </div>
+   <div class='field col-md-6'>
+    <%= f.label :birthdate, 'Data de Nascimento' %>
+    <%= f.date_field :birthdate, class: 'form-control', required: 'required' %>
+   </div>
+   <div class='field col-md-6'>
+    <%= f.label :gender, 'Genero' %>
+    <%= f.select(:gender, {'Masculino' => 'Masculino', 'Feminino' => 'Feminino'}, {prompt: 'Selecione o Genero'}, {class: 'form-control', required: 'required'}) %>
+   </div>
+   <div class='field col-md-6'>
+    <%= f.label :rg, 'RG' %>
+    <%= f.text_field :rg, class: 'form-control', required: 'required', placeholder: 'Digite o RG' %>
+   </div>
+   <div class='field col-md-7'>
+    <%= f.label :email, 'E-mail' %>
+    <%= f.email_field :email, class: 'form-control', required: 'required',
+    placeholder: 'Digite o e-mail', autocomplete: 'off' %>
+   </div>
+   <div class='field col-md-5'>
+    <%= f.label :phone, 'Telefone' %>
+    <%= f.phone_field :phone, class: 'form-control', required: 'required',
+    placeholder: 'Digite o numero de telefone' %>
+   </div>
+   <div class='field col-md-6'>
+    <%= f.label :state, 'Estado' %>
+    <%= f.collection_select(:state, State.all, :id, :name, {prompt: 'Selecionar Estado'}, {class: 'form-control', required: 'required'}) %>
+   </div>
+   <div class='field col-md-6'>
+    <%= f.label :state, 'Cidade' %>
+    <%= f.collection_select(:city, City.all, :id, :name, {prompt: 'Selecionar Cidade'}, {class: 'form-control', required: 'required'}) %>
+   </div>
+   <div class='field col-md-6'>
+    <%= f.label :state, 'Bairro' %>
+    <%= f.collection_select(:state, Neighborhood.order(name: :asc), :id, :name, {prompt: 'Selecionar Bairro'}, {class: 'form-control', required: 'required'}) %>
+   </div>
+   <div class='field col-md-6'>
+    <%= f.label :state, 'Colégio' %>
+    <%= f.collection_select(:state, College.all, :id, :name, {prompt: 'Selecionar Colégio'}, {class: 'form-control', required: 'required'}) %>
+   </div>
+   <div class='field col-md-6'>
+    <%= f.label :university, 'Universidade' %>
+    <%= f.collection_select(:state, University.all, :id, :name, {prompt: 'Selecionar Universidade'}, {class: 'form-control', required: 'required'}) %>
+   </div>
+   <div class='field col-md-6'>
+    <%= f.label :job, 'Profissão' %>
+    <%= f.collection_select(:state, Profession.all, :id, :name, {prompt: 'Selecionar Profissão'}, {class: 'form-control', required: 'required'}) %>
+   </div>
+   <div class='field col-md-12'><br>
+    <%= f.check_box :term %> Li e aceito os termos de <%= link_to 'inscrição', '' %>.
+   </div>
+   <div class='field col-md-12'><br>
+    <%= f.submit 'Inscreva-me', class: 'btn btn-primary btn-lg top' %>
+   </div>
+<% end %>

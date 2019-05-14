@@ -3,10 +3,12 @@
 .jumbotron{style: "background-image: url(brand.svg) !important; background-color: #FFF;"}
   .container
     .row
-      .col-md-12{class: 'text-center'}
+      .col-md-7{class: 'text-left'}
         %h2{class: 'bold'} Sua carreria de Desenvolvedor começa aqui.
         %p Do Básico ao Avançado, mantido por uma comunidade apaixonada.
         =link_to 'Ver toda a grade', courses_path, class: 'btn btn-primary btn-lg top'
+      .col-md-5
+        = render partial: 'subscriptions/form' 
 
 #how-it-work{style: 'margin-bottom: 100px;'}
   .container
