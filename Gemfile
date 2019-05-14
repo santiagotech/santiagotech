@@ -35,6 +35,7 @@ gem 'kaminari'
 gem 'kaminari-bootstrap'
 gem 'pry-rails'
 gem 'pry-byebug'
+gem 'awesome_print'
 # Use ActiveStorage variant
 # gem 'mini_magick', '~> 4.8'
 
