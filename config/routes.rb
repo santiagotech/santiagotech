@@ -4,11 +4,10 @@ Rails.application.routes.draw do
   # Authentication
   # @implemented
   devise_for :users
-
-  mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
-  # Authentication
+  
+  # Administration
   # @implemented
-  # devise_for :users
+  mount RailsAdmin::Engine => '/admin', as: 'rails_admin' 
 
   # Application
   # @implemented
