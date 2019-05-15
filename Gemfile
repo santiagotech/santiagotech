@@ -39,6 +39,8 @@ gem 'awesome_print'
 gem 'jquery-inputmask-rails'
 gem 'google_visualr'
 gem 'wicked'
+gem 'gibbon'
+gem 'sendgrid-ruby'
 # Use ActiveStorage variant
 # gem 'mini_magick', '~> 4.8'
 
