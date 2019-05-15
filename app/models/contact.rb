@@ -39,7 +39,7 @@ class Contact
             presence: true,
             uniqueness: false,
             allow_blank: false,
-            length: { minimum: 3, maximum 140 }
+            length: { minimum: 3, maximum: 140 }
   
   validates :message,
             presence: true,
