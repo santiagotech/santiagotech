@@ -53,6 +53,9 @@
    <div class='field col-md-12'><br>
     <%= f.check_box :term %> Li e aceito os termos de <%= link_to 'inscrição', '' %>.
    </div>
+   <div class='field'>
+      <%= recaptcha_tags %>
+   </div>
    <div class='field col-md-12'><br>
     <%= f.submit 'Inscreva-me', class: 'btn btn-primary btn-lg top' %>
    </div>
