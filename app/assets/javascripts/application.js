@@ -18,8 +18,7 @@
 //= require jquery.inputmask.date.extensions
 //= require rails-ujs
 //= require activestorage
-//= require turbolinks
 //= require_tree .
 $(function(){
-
+  e.preventDefault()
 });

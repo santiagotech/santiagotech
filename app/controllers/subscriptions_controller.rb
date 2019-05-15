@@ -4,7 +4,7 @@ class SubscriptionsController < ApplicationController
   def create
     subscription = Subscription.new(subscription_params)
     binding.pry
-    if subscription.save
+    if verify_recaptcha(model: subscription) && subscription.save
       redirect_to root_path, success: 'Inscrição efetuada com sucesso.'
     else
       redirect_to root_path, error: 'Falha ao efetuar inscrição, tente novamente mais tarde.'
